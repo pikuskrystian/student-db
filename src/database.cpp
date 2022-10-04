@@ -1,9 +1,13 @@
 #include "database.hpp"
 
 bool Database::add(const Student &s){
-    if(!isAdded_){
+    if(isAdded_){
+        
+        return false;
+    }
+    else{
         isAdded_ = true;
         return true;
     }
-    else return false;
+
 }
