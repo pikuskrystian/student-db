@@ -3,7 +3,7 @@ project(student-database)
 add_executable(${PROJECT_SOURCE_DIR} src/main.cpp src/database.cpp src/student.cpp)
 
 # GoogleTest requires at least C++14
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
