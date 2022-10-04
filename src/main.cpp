@@ -1,6 +1,8 @@
 #include <iostream>
+#include "student.hpp"
+#include "database.hpp"
 
 int main(){
-    printf("HEllo xd");
+
     return 0;
 }
