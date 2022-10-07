@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/student-database-ut.dir/src/tests.cpp.o CMakeFiles/student-database-ut.dir/src/database.cpp.o CMakeFiles/student-database-ut.dir/src/student.cpp.o  -o student-database-ut  lib/libgtest_main.a lib/libgtest.a -lpthread 

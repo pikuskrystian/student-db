@@ -2,15 +2,8 @@
 #include "database.hpp"
 #include "student.hpp"
 
-// Demonstrate some basic assertions.
-TEST(HelloTest, BasicAssertions) {
-  // Expect two strings not to be equal.
-  EXPECT_STRNE("hello", "world");
-  // Expect equality.
-  EXPECT_EQ(7 * 6, 42);
-}
 
-TEST(CheckStructure. Req1Req2){
+TEST_F(DatabaseTest, Req1Req2){
   Student adam {
     "Adam",
     "Kowalski",
@@ -25,3 +18,28 @@ TEST(CheckStructure. Req1Req2){
    EXPECT_FALSE(db.add(adam));
 }
 
+TEST_F(DatabaseTest, DisplayEmptyDb){
+  Database db;
+  auto content = db.show();
+  auto expected = "";
+  EXPECT_EQ(content, expected);
+  
+}
+
+
+/*
+TEST(DisplayDb, DisplayNonEmptyDb){
+  Database db;
+
+  Student adam{
+     "Adam",
+    "Kowalski",
+    "ul. DObra 13, 33-160 Tuchów",
+    12345,
+    "98020807599",
+    Gender::Male
+  };
+  EXPECT_TRUE(db.add(adam));
+  db.display;
+  }
+*/
