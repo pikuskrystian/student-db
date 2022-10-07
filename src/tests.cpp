@@ -2,6 +2,10 @@
 #include "database.hpp"
 #include "student.hpp"
 
+struct DatabaseTest : ::testing::Test
+{
+  Database db;
+};
 
 TEST_F(DatabaseTest, Req1Req2){
   Student adam {
@@ -27,10 +31,9 @@ TEST_F(DatabaseTest, DisplayEmptyDb){
 }
 
 
-/*
-TEST(DisplayDb, DisplayNonEmptyDb){
-  Database db;
 
+TEST_F(DatabaseTest, DisplayNonEmptyDb){
+  
   Student adam{
      "Adam",
     "Kowalski",
@@ -39,7 +42,9 @@ TEST(DisplayDb, DisplayNonEmptyDb){
     "98020807599",
     Gender::Male
   };
+
   EXPECT_TRUE(db.add(adam));
-  db.display;
+  auto content = db.show();
+  auto expected = "Adam Kowalski; ul. Dobra 13, 33-160 Tuchów; 12345; 98020807599; Male";
+  EXPECT_EQ(content, expected);
   }
-*/

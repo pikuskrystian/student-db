@@ -14,9 +14,13 @@ Student(std::string name,
         int indexNumber,
         std::string pesel,
         Gender gender);
+        std::string show() const;
+
 private:
-
-    Gender g;
-
-
+        std::string name_,
+        std::string lastName_,
+        std::string address_,
+        int indexNumber_,
+        std::string pesel_,
+        Gender gender_;
 };
