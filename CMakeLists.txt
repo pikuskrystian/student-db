@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(student-database)
-add_executable(${PROJECT_SOURCE_DIR} src/main.cpp src/database.cpp src/student.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp src/database.cpp src/student.cpp)
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 20)
